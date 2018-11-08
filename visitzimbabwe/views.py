@@ -8,6 +8,14 @@ from . import app
 def index():
     return render_template('index.html')
 
+@app.route('/brand')
+def brand():
+    return render_template('brand.html')
+
+@app.route('/market')
+def market():
+    return render_template('last.html')
+
 
 
 @app.route('/chat', methods=["POST"])
