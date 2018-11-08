@@ -102,7 +102,7 @@ function transferMessage(input) {
     type: "POST",
     dataType: "json",
     contentType: "application/json",
-    url: "http://127.0.0.1:5000/chat"
+    url: "/chat"
   }).done(function(response) {
     if (response.error) {
     } else {
