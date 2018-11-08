@@ -17,7 +17,7 @@ def chat():
     greetings = ['hello', 'hi','hie', 'hey', 'yo',
                     'wassup', 'ndeipi', 'how are you']
 
-    exits = ['bye', 'exit', 'go back', 'good bye']
+    exits = ['bye', 'exit', 'go back', 'good bye','thanks','thank you']
 
 
     if message in greetings:
