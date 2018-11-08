@@ -78,14 +78,12 @@ function sendNewMessage() {
   if (!newMessage) return;
 
   var messagesContainer = $(".messages");
+  var response = transferMessage(userInput);
 
-  messagesContainer.append(
-    ['<li class="other">', newMessage, "</li>"].join("")
-  );
+  messagesContainer.append(['<li class="other">', response, "</li>"].join(""));
 
-  // clean out old message
   userInput.html("");
-  // focus on input
+
   userInput.focus();
 
   messagesContainer.finish().animate(
@@ -94,6 +92,29 @@ function sendNewMessage() {
     },
     250
   );
+}
+
+function transferMessage(input) {
+  data = {};
+  data["message"] = input;
+  data_json = JSON.stringify(data);
+
+  $.ajax({
+    data: data_json,
+    type: "POST",
+    dataType: "json",
+    contentType: "application/json",
+    url: "http://127.0.0.1:5000/cashier/deduct_balance"
+  }).done(function(response) {
+    if (response.error) {
+    } else {
+      if (response.message == "failed") {
+        console.log("error");
+      } else {
+        return response.message;
+      }
+    }
+  });
 }
 
 function onMetaAndEnter(event) {
