@@ -22,7 +22,6 @@ def market():
 def chat():
     data = request.get_json()
     message = data['messageText'] 
-    print('-----------------------------------------',message)
 
     greetings = ['hello', 'hi','hie', 'hey', 'yo',
                     'wassup', 'ndeipi', 'how are you']
