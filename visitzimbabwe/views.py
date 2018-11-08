@@ -30,8 +30,8 @@ def chat():
 
 
     if message in greetings:
-        response = "Hi there, which place would you like to visit? <br/><br/><a href='' target='_blank'><button  style='background-color: #0080FF' class='btn btn-success btn-block btn-round'>Kariba</button></a><br/>" + \
-                    "<a href='' target='_blank'><button  style='background-color: #0080FF' class='btn btn-success btn-block btn-round'>Victoria Falls</button></a><br/><a href='' target='_blank'><button  style='background-color: #0080FF' class='btn btn-success btn-block btn-round'>Bvumba</button></a></button>"
+        response = "Hi there, which place would you like to visit? <br/><br/><a href='http://www.wildzambezi.com/locations/1/kariba-town' target='_blank'><button  style='background-color: #0080FF' class='btn btn-success btn-block btn-round'>Kariba</button></a><br/>" + \
+                    "<a href='https://www.victoriafalls-guide.net/' target='_blank'><button  style='background-color: #0080FF' class='btn btn-success btn-block btn-round'>Victoria Falls</button></a><br/><a href='http://www.experiencezimbabwe.com/explore/eastern-highlands/bvumba-mountains' target='_blank'><button  style='background-color: #0080FF' class='btn btn-success btn-block btn-round'>Bvumba</button></a></button>"
         return jsonify({'status': 'OK', 'answer': response})
     
     elif message in exits:
