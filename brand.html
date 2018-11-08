@@ -206,8 +206,7 @@
         </div>
         <div class="row col-sm-12">
           <div class="col-lg-5" style="padding:0; margin-left:80%">
-            <br /><button class="btn btn-success">
-              More About the priorities</button
+            <button class="btn btn-success">More About the priorities</button
             ><br /><br /><br />
           </div>
         </div>
@@ -248,71 +247,47 @@
         </div>
       </div>
       <div class="day"></div>
+      <br />
+      <div style="margin:5%">
+        <h3 style="border-bottom:black 1px solid">
+          <b>About The European Commision</b><br />&nbsp;
+        </h3>
+        <br />
+        <div class="col-sm-12 row">
+          <div class="col-sm-6">
+            <h6>Department (Directorates-General) and services</h6>
+          </div>
+          <div class="col-sm-6"><h6>Commision at work</h6></div>
+        </div>
+        <br />
+        <button class="btn btn-success" style="margin-left:80%">
+          More About the Commission
+        </button>
+        <h3 style="border-bottom:black 1px solid">
+          <b>Contact</b><br />&nbsp;
+        </h3>
+        <br />
+        <div class="col-sm-12 row">
+          <div
+            class="col-sm-5"
+            style="border-bottom:black 1px solid; padding: 0"
+          >
+            <h6>Zim Local Offices and Information Local points</h6>
+            <br />
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div
+            class="col-sm-5"
+            style="border-bottom:black 1px solid; padding:0"
+          >
+            <h6>Commision staff</h6>
+            <br />
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 
   <head style="background: url(./assets/bg.PNG);  background-size: 100%;">
   </head>
-
-  <div class="row col-sm-12" style="height:350px">
-    <div class="col-sm-3" style="background-color:red; height: 100%">ds</div>
-    <div class="col-sm-6" style=" height: 100%;">
-      <div class="slideshow-container" style="height:100%; width: 100%">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="img/Assets/balancing.jpg" style="width:100%;height:100%" />
-          <div class="text">Caption Text</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img
-            src="img/Assets/gold_mining_zimbabwe-min.jpg"
-            style="width:100%; height:100%"
-          />
-          <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img
-            src="img/Assets/Outdoor-Guest-Area-At-Somalisa-Camp-1600x900.jpg"
-            style="width:100%; height:100%"
-          />
-          <div class="text">Caption Three</div>
-        </div>
-      </div>
-      <br />
-
-      <div style="text-align:center">
-        <span class="dot"></span> <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-
-      <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {
-            slideIndex = 1;
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-      </script>
-    </div>
-    <div class="col-sm-3" style="background-color:blue; height:100%">sds</div>
-  </div>
 </html>
