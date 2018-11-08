@@ -14,15 +14,15 @@ def index():
 def chat():
     message = request.form['messageText']
 
-    greetings = ['hello', 'hi', 'hey', 'yo',
+    greetings = ['hello', 'hi','hie', 'hey', 'yo',
                     'wassup', 'ndeipi', 'how are you']
 
     exits = ['bye', 'exit', 'go back', 'good bye']
 
 
     if message in greetings:
-       
-        return jsonify({'status': 'OK', 'answer': ''})
+        response = ''
+        return jsonify({'status': 'OK', 'answer': response})
     
     elif message in exits:
         return jsonify({'status': 'OK', 'answer': 'Thank you for chatting with me'})
