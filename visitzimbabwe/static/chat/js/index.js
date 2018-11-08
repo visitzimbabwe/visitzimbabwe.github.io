@@ -78,11 +78,8 @@ function sendNewMessage() {
   if (!newMessage) return;
 
   var messagesContainer = $(".messages");
-  var response = transferMessage(userInput);
 
-  messagesContainer.append(['<li class="other">', response, "</li>"].join(""));
-
-  userInput.html("");
+  transferMessage(newMessage);
 
   userInput.focus();
 
@@ -95,8 +92,9 @@ function sendNewMessage() {
 }
 
 function transferMessage(input) {
+  console.log(input);
   data = {};
-  data["message"] = input;
+  data["messageText"] = input;
   data_json = JSON.stringify(data);
 
   $.ajax({
@@ -104,14 +102,22 @@ function transferMessage(input) {
     type: "POST",
     dataType: "json",
     contentType: "application/json",
-    url: "http://127.0.0.1:5000/cashier/deduct_balance"
+    url: "http://127.0.0.1:5000/chat"
   }).done(function(response) {
     if (response.error) {
     } else {
       if (response.message == "failed") {
         console.log("error");
       } else {
-        return response.message;
+        var userInput = $(".text-box");
+        var messagesContainer = $(".messages");
+        userInput.html("");
+        messagesContainer.append(
+          ['<li class="other">', input, "</li>"].join("")
+        );
+        messagesContainer.append(
+          ['<li class="self">', response.answer, "</li>"].join("")
+        );
       }
     }
   });

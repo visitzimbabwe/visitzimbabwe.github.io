@@ -20,7 +20,8 @@ def market():
 
 @app.route('/chat', methods=["POST"])
 def chat():
-    message = request.form['messageText']
+    data = request.get_json()
+    message = data['messageText'] 
 
     greetings = ['hello', 'hi','hie', 'hey', 'yo',
                     'wassup', 'ndeipi', 'how are you']
