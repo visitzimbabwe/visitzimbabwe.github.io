@@ -35,8 +35,8 @@
 .floating-chat.expand {
   width: 300px;
   font: -webkit-small-control;
-  max-height: 500px;
-  height: 500px;
+  max-height: 450px;
+  height: 450px;
   border-radius: 5px;
   cursor: auto;
   opacity: 1;
@@ -152,7 +152,7 @@
 }
 .floating-chat .chat .messages li.other:before {
   right: -45px;
-  background-image: url(https://github.com/Thatkookooguy.png);
+  background-image: url(https://dumagueteinfo.com/classifieds/rentals/app/uploads/2017/03/user.png);
 }
 .floating-chat .chat .messages li.other:after {
   border-right: 10px solid transparent;
@@ -168,7 +168,7 @@
 }
 .floating-chat .chat .messages li.self:before {
   left: -45px;
-  background-image: url(https://github.com/ortichon.png);
+  background-image: url(http://tab-studio.com/wp-content/uploads/2017/07/bad-internet-bot.jpg);
 }
 .floating-chat .chat .messages li.self:after {
   border-left: 10px solid transparent;
